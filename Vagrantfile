@@ -18,7 +18,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "Ubuntu-22.00" do|ubuntu|
   ubuntu.vm.box = "alvistack/ubuntu-22.04"
   ubuntu.vm.provider "virtualbox" do |vb|
-    vm.name = "ubuntu22"
+    vb.name = "ubuntu22"
     vb.memory ="2048"
     vb.cpus = 2
   end
