@@ -17,12 +17,12 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "Ubuntu-22.00" do|ubuntu|
   ubuntu.vm.box = "alvistack/ubuntu-22.04"
-  ubuntu.vm.hostname = "ubuntu22"
-  ubuntu.vm.network "private_network", ip: "192.168.56.10"
   ubuntu.vm.provider "virtualbox" do |vb|
+    vm.name = "ubuntu22"
     vb.memory ="2048"
     vb.cpus = 2
   end
+    ubuntu.vm.network "private_network", ip: "192.168.56.10"
 end
 
 #BOX-Windows Server 2019
